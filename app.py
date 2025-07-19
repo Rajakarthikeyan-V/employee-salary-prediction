@@ -6,7 +6,7 @@ import joblib
 model = joblib.load("employee_salary_prediction.pkl")
 
 # Load dataset for dropdown values
-df = pd.read_csv("D:/Employee-Salary-Prediction-main/employee_salary.csv")
+df = pd.read_csv("employee_salary.csv")
 df = df.dropna()
 df['Salary'] = pd.to_numeric(df['Salary'], errors='coerce')
 df = df.dropna(subset=['Salary'])
