@@ -58,7 +58,7 @@ st.markdown("""
 
 # App Title
 st.markdown("<h1>💼 Employee Salary Predictor</h1>", unsafe_allow_html=True)
-st.markdown("### 🎯 Estimate employee **annual salary** using machine learning.")
+st.markdown("### 🎯 Estimate employee **Monthly salary** using machine learning.")
 st.markdown("---")
 
 # Sidebar
@@ -107,6 +107,6 @@ input_df = pd.DataFrame([{
 if submit:
     try:
         prediction = model.predict(input_df)[0]
-        st.success(f"💰 **Estimated Annual Salary**: ₹{prediction:,.2f}")
+        st.success(f"💰 **Estimated Monthly Salary**: ₹{prediction:,.2f}")
     except Exception as e:
         st.error(f"Prediction failed: {e}")
